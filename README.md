@@ -7,7 +7,7 @@
 ### Featuring [node jquery](https://github.com/coolaj86/node-jquery)
 - For Windows, at least Win7-64, it has dependencies that require installing Visual Studio and updating your 2010 C++ redistributables. Maybe 20 minutes, 500 MB. Sooo, if you are on Windows, and want a quicker demo, or you like TJ Holowaychuk's libs, look at this clone using SuperAgent: __[payper](https://github.com/apelade/payper)__.
 
-#### See the [PayPal API](https://developer.paypal.com/webapps/developer/docs/api)
+### See the [PayPal API](https://developer.paypal.com/webapps/developer/docs/api)
 
 
 ## Install:
@@ -28,8 +28,8 @@ Compile to javascript: `coffee -c payjaq_test.coffee`
 ## Notes:
 - To create live test objects, get a dev client id and secret from PayPal.
 - The static test objects may have outages, like on 4/4/2013 2:15 PM Pacific. Currently the error output you see is:
-    Err posting creds
-    get_cred complete status: error
+  -  Err posting creds
+     get_cred complete status: error
 - The tests that try to execute a payment fail CORRECTLY with PAYMENT_STATE_INVALID running static PayPal test objects.
 - Note the payment approval step must have been taken by the user for
   completePayment to succeed.
