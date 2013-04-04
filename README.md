@@ -1,7 +1,6 @@
 ###
 # payjaq
 ======
-# ** Update: Unable to hit static test objects 4/4/2013 2:15 Pacific. Looking into it.
 
 ## Node Examples for the _PayPal_ REST API with jquery AJAX
 
@@ -26,9 +25,12 @@
 Compile to javascript: `coffee -c payjaq_test.coffee`
 
 
-## Notes: 
-- The tests that try to execute a payment fail CORRECTLY with PAYMENT_STATE_INVALID running static PayPal test objects.
+## Notes:
 - To create live test objects, get a dev client id and secret from PayPal.
+- The static test objects may have outages, like on 4/4/2013 2:15 PM Pacific. Currently the error output you see is:
+    Err posting creds
+    get_cred complete status: error
+- The tests that try to execute a payment fail CORRECTLY with PAYMENT_STATE_INVALID running static PayPal test objects.
 - Note the payment approval step must have been taken by the user for
   completePayment to succeed.
 - Don't forget to redirect to approval_url listed in response links if using

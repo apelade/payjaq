@@ -4,27 +4,52 @@
 
   payjaq = require("./payjaq");
 
+  /*
+    Exercise the functions in payjaq
+  */
+
+
   test = function() {
     var client_id, client_secret;
 
     console.log("Run usage examples");
     client_id = 'EOJ2S-Z6OoN_le_KS1d75wsZ6y0SFdVsY9183IvxFyZp';
     client_secret = 'EClusMEUk8e9ihI7ZdVLF5cZ6y0SFdVsY9183IvxFyZp';
+    /*
+      Get a token that will be used to credential the remaining ops
+    */
+
     return payjaq.getToken(client_id, client_secret, function(res) {
       var test_payment, token;
 
       token = res.access_token;
       console.log(" ");
+      /*
+        Get 10 payments
+      */
+
       payjaq.getPaymentsPaged(token, function(res) {
         var fakeid;
 
         console.log(" ");
+        /*
+          Get a payment by id
+        */
+
         fakeid = res.payments[0].id;
         payjaq.getPaymentById(fakeid, token);
         return console.log(" ");
       });
+      /*
+        Get your payments of status approved
+      */
+
       payjaq.getApprovedPayments(token);
       console.log(" ");
+      /*
+        Make a test object
+      */
+
       test_payment = {
         intent: "sale",
         payer: {
@@ -65,11 +90,19 @@
           }
         ]
       };
+      /*
+        Create a payment with the test object
+      */
+
       payjaq.createPayment(test_payment, token, function(res) {
         var payer;
 
         console.log("created payment.id == ", res.id);
         console.log(" ");
+        /*
+          Executing that payment will fail as is
+        */
+
         console.log("Note: EXPECTED to ERROR with responseText.name:\"PAYMENT_STATE_INVALID\"\nuntil you get your own PayPal creds and make some live objects and payers.");
         payer = {
           payer_id: "7E7MGXCWTTKK2"
