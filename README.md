@@ -29,7 +29,7 @@ Compile to javascript: `coffee -c payjaq_test.coffee`
 - To create live test objects, get a dev client id and secret from PayPal.
 - The static test objects may have outages, like on 4/4/2013 2:15 PM Pacific. Currently the error output you see is:
   -  Err posting creds
-     get_cred complete status: error
+  -  get_cred complete status: error
 - The tests that try to execute a payment fail CORRECTLY with PAYMENT_STATE_INVALID running static PayPal test objects.
 - Note the payment approval step must have been taken by the user for
   completePayment to succeed.
