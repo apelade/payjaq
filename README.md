@@ -22,7 +22,7 @@ Compile to javascript: `coffee -c payjaq_test.coffee`
 
 
 ## Notes: 
-- The tests that try to execute a payment fail CORRRECTLY with PAYMENT_STATE_INVALID running static PayPal test objects.
+- The tests that try to execute a payment fail CORRECTLY with PAYMENT_STATE_INVALID running static PayPal test objects.
 - To create live test objects, get a dev client id and secret from PayPal.
 - Note the payment approval step must have been taken by the user for
   completePayment to succeed.
