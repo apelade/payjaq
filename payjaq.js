@@ -8,6 +8,8 @@ See https://github.com/apelade/payjaq/README.md for details
 (function() {
   var $, PAYMENT, ajaxGet, ajaxPost, printResults;
 
+  $ = require('jquery');
+
   printResults = function(res) {
     if (res != null) {
       return console.log(res);
@@ -16,7 +18,11 @@ See https://github.com/apelade/payjaq/README.md for details
 
   PAYMENT = 'https://api.sandbox.paypal.com/v1/payments/payment/';
 
-  $ = require('jquery');
+  /*
+  Three wrapper functions for each main ajax type we need. Get, post, getToken.
+  Inside wrapping funcs, set headers with input token, handed to beforeSend
+  */
+
 
   ajaxPost = function(path, data, token, callback) {
     var setHeaders;
@@ -60,6 +66,11 @@ See https://github.com/apelade/payjaq/README.md for details
       return console.log("get complete", status);
     });
   };
+
+  /*
+  These functions could be called in Express server route files, for example.
+  */
+
 
   module.exports.getToken = function(user, pass, callback) {
     var setCredHeaders;

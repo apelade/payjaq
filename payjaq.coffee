@@ -3,15 +3,20 @@ Node Examples for the Paypal REST API with jquery AJAX
 See https://github.com/apelade/payjaq/README.md for details
 ###
 
+$ = require 'jquery'
+
 printResults = (res) ->
   console.log res if res?
 
 PAYMENT = 'https://api.sandbox.paypal.com/v1/payments/payment/'
 
-$ = require 'jquery'
+###
+Three wrapper functions for each main ajax type we need. Get, post, getToken.
+Inside wrapping funcs, set headers with input token, handed to beforeSend
+###
 
 ajaxPost = (path, data, token, callback) ->
-
+  
   setHeaders = (xhr) ->
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.setRequestHeader('Authorization', 'Bearer ' + token)
@@ -49,7 +54,10 @@ ajaxGet = (extra_path, token, callback) ->
   .complete (xhr, status) ->
     return console.log "get complete", status
     
-    
+###
+These functions could be called in Express server route files, for example.
+###
+
 module.exports.getToken = (user, pass, callback) ->
 
   $.ajax(
@@ -71,28 +79,22 @@ module.exports.getToken = (user, pass, callback) ->
     
   setCredHeaders = (xhr) ->
     xhr.setRequestHeader('Accept', 'application/json')
-    xhr.setRequestHeader('Accept-Language', 'en_US')
-    
+    xhr.setRequestHeader('Accept-Language', 'en_US')    
 
 module.exports.getAllPayments = ( token, callback = printResults) ->
   ajaxGet('', token, callback)
-
   
 module.exports.getApprovedPayments = ( token, callback = printResults ) ->
   ajaxGet('?state=approved', token, callback)
-
   
 module.exports.getPaymentsPaged = ( token, callback = printResults ) ->
   ajaxGet('?count=10', token, callback)
 
-
 module.exports.getPaymentById = ( id, token, callback = printResults ) ->
   ajaxGet(id, token, callback)
  
- 
 module.exports.createPayment = ( payment, token, callback = printResults ) ->
   ajaxPost('', JSON.stringify(payment), token, callback)
-
 
 module.exports.executePayment = ( id, payer, token, callback = printResults ) ->
   ajaxPost( id + '/execute/', JSON.stringify(payer), token, callback)
