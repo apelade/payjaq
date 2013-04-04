@@ -2,12 +2,9 @@
 ======
 
 ## Node Examples for the _PayPal_ REST API with jquery AJAX
-
-
-## Featuring [node jquery](https://github.com/coolaj86/node-jquery) for the ajax. 
+### Featuring [node jquery](https://github.com/coolaj86/node-jquery) for the ajax.
 #### For Windows, at least Win7-64, it has dependencies that require installing Visual Studio and updating your 2010 C++ redistributables. 20 minutes. Sooo, if you are on Windows, and want a quicker demo, or you like TJ Holowaychuk's libs, look at this clone using SuperAgent: __[payper](https://github.com/apelade/payper)__
-
-### See the [PayPal API](https://developer.paypal.com/webapps/developer/docs/api)
+#### See the [PayPal API](https://developer.paypal.com/webapps/developer/docs/api)
 
 ## Install:
 - Run the [nodejs.org](http://nodejs.org) installer
