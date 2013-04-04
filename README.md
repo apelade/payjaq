@@ -8,18 +8,18 @@
 See https://developer.paypal.com/webapps/developer/docs/api
 
 ## Install:
-Run the nodejs.org installer
-mkdir a project folder and cd there
-copy these files and package.json there
+- Run the nodejs.org installer
+- mkdir a project folder and cd there
+- copy these files and package.json there
 
-__'npm install jquery'__
-__'npm install coffee-script'__ if you want to use it
+ __`npm install jquery`__
+ __`npm install coffee-script`__ if you want to use it
 
 ## Run:
 
-__'node payjaq.js'__ or __'coffee payjaq.coffee'__
+__`node payjaq.js` or `coffee payjaq.coffee`__
 
-Compile to javascript: __'coffee -c payjaq.coffee'__
+Compile to javascript: __`coffee -c payjaq.coffee`__
 
 
 ## Notes: 
