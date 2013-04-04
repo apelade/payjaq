@@ -28,6 +28,6 @@ Compile to javascript: `coffee -c payjaq_test.coffee`
   completePayment to succeed.
 - Don't forget to redirect to approval_url listed in response links if using
   the paypal payment method.
-- Since this is an example, uses a single-arg callback.
+- Since this is an example, it uses a single-arg callback.
 - Otherwise, it may be a callback per result state, using a common err handler.
 
