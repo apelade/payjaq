@@ -5,9 +5,9 @@
 
 
 ## Featuring node jquery for the ajax. 
-- For Windows, at least Win7-64, it has dependencies that require installing Visual Studio and updating your 2010 C++ redistributables. 20 minutes.
-#### Sooo, if you are on Windows, and want a quicker demo, or you like TJHollowaychuk's libs, have a look at
-### [payper](https://github.com/apelade/payper)
+### For Windows, at least Win7-64, it has dependencies that require installing Visual Studio and updating your 2010 C++ redistributables. 20 minutes.
+### Sooo, if you are on Windows, and want a quicker demo, or you like TJHollowaychuk's libs, have a look at
+## [payper](https://github.com/apelade/payper)
 
 
 ### See the [PayPal API](https://developer.paypal.com/webapps/developer/docs/api)
