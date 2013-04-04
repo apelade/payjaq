@@ -75,7 +75,7 @@ See https://github.com/apelade/payjaq/README.md for details
       dataType: 'json',
       beforeSend: setCredHeaders
     }).success(function(res) {
-      console.log("creds == Profit!");
+      console.log("creds success");
       return callback(res);
     }).error(function(err) {
       return console.log("Err posting creds");
@@ -92,7 +92,7 @@ See https://github.com/apelade/payjaq/README.md for details
     if (callback == null) {
       callback = printResults;
     }
-    return ajaxGet("", token, callback);
+    return ajaxGet('', token, callback);
   };
 
   module.exports.getApprovedPayments = function(token, callback) {
@@ -120,14 +120,14 @@ See https://github.com/apelade/payjaq/README.md for details
     if (callback == null) {
       callback = printResults;
     }
-    return ajaxPost("", JSON.stringify(payment), token, callback);
+    return ajaxPost('', JSON.stringify(payment), token, callback);
   };
 
-  module.exports.executePayment = function(idstr, payer, token, callback) {
+  module.exports.executePayment = function(id, payer, token, callback) {
     if (callback == null) {
       callback = printResults;
     }
-    return ajaxPost("" + idstr + '/execute/', JSON.stringify(payer), token, callback);
+    return ajaxPost(id + '/execute/', JSON.stringify(payer), token, callback);
   };
 
 }).call(this);
