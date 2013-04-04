@@ -35,3 +35,6 @@ Compile to javascript: `coffee -c payjaq_test.coffee`
 - Since this is an example, it uses a single-arg callback.
 - Otherwise, it may be a callback per result state, using a common err handler.
 
+### License:
+MIT 
+
