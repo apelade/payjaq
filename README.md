@@ -12,14 +12,15 @@ See https://developer.paypal.com/webapps/developer/docs/api
 - mkdir a project folder and cd there
 - copy these files and package.json there
 
- __`npm install jquery`__
- __`npm install coffee-script`__ if you want to use it
+`npm install jquery`
+or
+`npm install coffee-script` if you want to use it
 
 ## Run:
 
-__`node payjaq.js` or `coffee payjaq.coffee`__
+`node payjaq_test.js` or `coffee payjaq_test.coffee`
 
-Compile to javascript: __`coffee -c payjaq.coffee`__
+Compile to javascript: `coffee -c payjaq_test.coffee`
 
 
 ## Notes: 
