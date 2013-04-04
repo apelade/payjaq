@@ -1,7 +1,7 @@
 # payjaq
 ======
 
-## Node Examples for the Paypal REST API with jquery AJAX
+## Node Examples for the * PayPal * REST API with jquery AJAX
 
 
 #### Featuring node jquery for the ajax
