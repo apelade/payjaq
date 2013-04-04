@@ -7,11 +7,11 @@
 #### See the [PayPal API](https://developer.paypal.com/webapps/developer/docs/api)
 
 ## Install:
-- Run the [nodejs.org](http://nodejs.org) installer
+- Run the [nodejs.org](http://nodejs.org) installer.
 - Save and extract the [zip file](https://github.com/apelade/payjaq/archive/master.zip) and open a terminal there.
 - `npm install jquery`
 - `npm install -g coffee-script` if desired?
-- Now if you are on Windows, and it doesn't run right away, follow [TooTallNate's instructions](https://github.com/TooTallNate/node-gyp)
+- Now if you are on Windows, and it doesn't run right away, follow [TooTallNate's instructions](https://github.com/TooTallNate/node-gyp).
 
 
 ## Run:
