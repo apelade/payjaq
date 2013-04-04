@@ -81,10 +81,8 @@ test = () ->
       ###
         Executing that payment will fail as is
       ###
-      console.log """
-      Note: EXPECTED to ERROR with responseText.name:"PAYMENT_STATE_INVALID"
-      until you get your own PayPal creds and make some live objects and payers.
-      """
+      console.log "Note: EXPECTED to ERROR: PAYMENT_STATE_INVALID until"
+      console.log "you get your own PayPal sandbox account for live objects."
       payer = 
         payer_id : "7E7MGXCWTTKK2"
       payjaq.executePayment res.id, payer, token, (res) ->
