@@ -62,7 +62,7 @@ module.exports.getToken = (user, pass, callback) ->
     beforeSend: setCredHeaders
   )
   .success (res) ->
-    console.log "creds == Profit!"
+    console.log "creds success"
     callback res
   .error (err) ->
     return console.log "Err posting creds"
@@ -75,7 +75,7 @@ module.exports.getToken = (user, pass, callback) ->
     
 
 module.exports.getAllPayments = ( token, callback = printResults) ->
-  ajaxGet("", token, callback)
+  ajaxGet('', token, callback)
 
   
 module.exports.getApprovedPayments = ( token, callback = printResults ) ->
@@ -91,9 +91,9 @@ module.exports.getPaymentById = ( id, token, callback = printResults ) ->
  
  
 module.exports.createPayment = ( payment, token, callback = printResults ) ->
-  ajaxPost("", JSON.stringify(payment), token, callback)
+  ajaxPost('', JSON.stringify(payment), token, callback)
 
 
-module.exports.executePayment = ( idstr, payer, token, callback = printResults ) ->
-  ajaxPost( "" + idstr + '/execute/', JSON.stringify(payer), token, callback)
+module.exports.executePayment = ( id, payer, token, callback = printResults ) ->
+  ajaxPost( id + '/execute/', JSON.stringify(payer), token, callback)
   
