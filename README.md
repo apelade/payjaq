@@ -11,10 +11,8 @@ See https://developer.paypal.com/webapps/developer/docs/api
 - Run the nodejs.org installer
 - mkdir a project folder and cd there
 - copy these files and package.json there
-
-`npm install jquery`
-or
-`npm install coffee-script` if you want to use it
+- `npm install jquery`
+- `npm install coffee-script` if you want to use it
 
 ## Run:
 
