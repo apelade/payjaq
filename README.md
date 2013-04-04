@@ -4,11 +4,11 @@
 ## Node Examples for the Paypal REST API with jquery AJAX
 
 
-### Featuring node jquery for the ajax.
+#### Featuring node jquery for the ajax
 See https://developer.paypal.com/webapps/developer/docs/api
 
 ## Install:
-- Run the [nodejs.org](http://node.js) installer
+- Run the [nodejs.org](http://nodejs.org) installer
 - mkdir a project folder and cd there
 - copy these files and package.json there
 - `npm install jquery`
