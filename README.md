@@ -4,15 +4,21 @@
 ## Node Examples for the _PayPal_ REST API with jquery AJAX
 
 
-#### Featuring node jquery for the ajax
-See https://developer.paypal.com/webapps/developer/docs/api
+## Featuring node jquery for the ajax. 
+- For Windows, at least Win7-64, it has dependencies that require installing Visual Studio and updating your 2010 C++ redistributables. 20 minutes.
+#### Sooo, if you are on Windows, and want a quicker demo, or you like TJHollowaychuk's libs, have a look at
+### [payper](https://github.com/apelade/payper)
+
+
+### See the [PayPal API](https://developer.paypal.com/webapps/developer/docs/api)
 
 ## Install:
 - Run the [nodejs.org](http://nodejs.org) installer
-- mkdir a project folder and cd there
-- copy these files and package.json there
+- Save and extract the [zip file](https://github.com/apelade/payjaq/archive/master.zip) and open a terminal there.
 - `npm install jquery`
-- `npm install coffee-script` if you want to use it
+- `npm install -g coffee-script` if desired?
+- Now if you are on Windows, and it doesn't run right away, follow [TooTallNate's instructions](https://github.com/TooTallNate/node-gyp)
+
 
 ## Run:
 
