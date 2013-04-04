@@ -1,0 +1,11 @@
+{
+  
+  "name": "payjaq",
+  "description": "Paypal REST node api examples",
+  "author": "Paul McCulloch",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery" : "1.8.3"
+  },
+  "engine": "node 0.8.x"
+}
