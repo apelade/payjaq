@@ -8,7 +8,7 @@
 See https://developer.paypal.com/webapps/developer/docs/api
 
 ## Install:
-- Run the nodejs.org installer
+- Run the [nodejs.org](http://node.js) installer
 - mkdir a project folder and cd there
 - copy these files and package.json there
 - `npm install jquery`
