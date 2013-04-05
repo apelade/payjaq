@@ -11,7 +11,8 @@ printResults = (res) ->
 PAYMENT = 'https://api.sandbox.paypal.com/v1/payments/payment/'
 
 ###
-  Three wrapper functions for each main ajax type we need. No beforeSend func!
+  Three wrapper functions for each main ajax type we need.
+  In this way setHeaders has token set for ajax beforeSend.
 ###
 
 ajaxPost = (path, data, token, callback) ->
@@ -54,7 +55,7 @@ ajaxGet = (extra_path, token, callback) ->
     return console.log "get complete", status
 
 ###
-  These functions could be called from Express server route files, for example
+  These functions could be called from Express server route files.
 ###    
     
 module.exports.getToken = (user, pass, callback) ->
