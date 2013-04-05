@@ -22,7 +22,7 @@
 
 `node payjaq_test.js` or `coffee payjaq_test.coffee`
 
-Compile to javascript: `coffee -c payjaq_test.coffee`
+`coffee -cb payjaq_test.coffee` compiles to javascript
 
 
 ## Notes:
