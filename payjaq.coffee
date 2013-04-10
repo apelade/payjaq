@@ -56,7 +56,9 @@ ajaxGet = (extra_path, token, callback) ->
 
 ###
   These functions could be called from Express server route files.
-###    
+  Params userand pass are paypal sandbox credentials.
+  Get your own for interaction with live paypal objects.
+###  
     
 module.exports.getToken = (user, pass, callback) ->
 
